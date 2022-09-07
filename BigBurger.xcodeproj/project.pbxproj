@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		9C8CEF6728C8C0520026392A /* BigBurgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CEF6628C8C0520026392A /* BigBurgerTests.swift */; };
 		9C8CEF7128C8C0520026392A /* BigBurgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CEF7028C8C0520026392A /* BigBurgerUITests.swift */; };
 		9C8CEF7328C8C0520026392A /* BigBurgerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CEF7228C8C0520026392A /* BigBurgerUITestsLaunchTests.swift */; };
+		9C8CEF8428C8C0DB0026392A /* Burger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CEF8328C8C0DB0026392A /* Burger.swift */; };
+		9C8CEF8728C8C10D0026392A /* BurgerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CEF8628C8C10D0026392A /* BurgerDetails.swift */; };
+		9C8CEF8928C8C4620026392A /* BurgerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8CEF8828C8C4620026392A /* BurgerView.swift */; };
+		9C8CEF8D28C8D5490026392A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9C8CEF8C28C8D5490026392A /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		9C8CEF6C28C8C0520026392A /* BigBurgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BigBurgerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8CEF7028C8C0520026392A /* BigBurgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBurgerUITests.swift; sourceTree = "<group>"; };
 		9C8CEF7228C8C0520026392A /* BigBurgerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBurgerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9C8CEF8328C8C0DB0026392A /* Burger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Burger.swift; sourceTree = "<group>"; };
+		9C8CEF8628C8C10D0026392A /* BurgerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerDetails.swift; sourceTree = "<group>"; };
+		9C8CEF8828C8C4620026392A /* BurgerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurgerView.swift; sourceTree = "<group>"; };
+		9C8CEF8A28C8D4B00026392A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8CEF8D28C8D5490026392A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +103,10 @@
 		9C8CEF5428C8C04F0026392A /* BigBurger */ = {
 			isa = PBXGroup;
 			children = (
+				9C8CEF8A28C8D4B00026392A /* Info.plist */,
+				9C8CEF8528C8C0FD0026392A /* Views */,
+				9C8CEF8228C8C0D40026392A /* Model */,
 				9C8CEF5528C8C04F0026392A /* BigBurgerApp.swift */,
-				9C8CEF5728C8C04F0026392A /* ContentView.swift */,
 				9C8CEF5928C8C0520026392A /* Assets.xcassets */,
 				9C8CEF5B28C8C0520026392A /* Preview Content */,
 			);
@@ -127,6 +138,24 @@
 			path = BigBurgerUITests;
 			sourceTree = "<group>";
 		};
+		9C8CEF8228C8C0D40026392A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C8CEF8328C8C0DB0026392A /* Burger.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C8CEF8528C8C0FD0026392A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9C8CEF8628C8C10D0026392A /* BurgerDetails.swift */,
+				9C8CEF8828C8C4620026392A /* BurgerView.swift */,
+				9C8CEF5728C8C04F0026392A /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +172,9 @@
 			dependencies = (
 			);
 			name = BigBurger;
+			packageProductDependencies = (
+				9C8CEF8C28C8D5490026392A /* Alamofire */,
+			);
 			productName = BigBurger;
 			productReference = 9C8CEF5228C8C04F0026392A /* BigBurger.app */;
 			productType = "com.apple.product-type.application";
@@ -207,7 +239,7 @@
 				};
 			};
 			buildConfigurationList = 9C8CEF4D28C8C04F0026392A /* Build configuration list for PBXProject "BigBurger" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -215,6 +247,9 @@
 				Base,
 			);
 			mainGroup = 9C8CEF4928C8C04F0026392A;
+			packageReferences = (
+				9C8CEF8B28C8D5490026392A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 9C8CEF5328C8C04F0026392A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8CEF8928C8C4620026392A /* BurgerView.swift in Sources */,
+				9C8CEF8728C8C10D0026392A /* BurgerDetails.swift in Sources */,
 				9C8CEF5828C8C04F0026392A /* ContentView.swift in Sources */,
+				9C8CEF8428C8C0DB0026392A /* Burger.swift in Sources */,
 				9C8CEF5628C8C04F0026392A /* BigBurgerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,11 +457,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BigBurger/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BigBurger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,11 +487,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BigBurger/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BigBurger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,6 +619,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9C8CEF8B28C8D5490026392A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9C8CEF8C28C8D5490026392A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C8CEF8B28C8D5490026392A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9C8CEF4A28C8C04F0026392A /* Project object */;
 }
